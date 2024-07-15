@@ -8,7 +8,7 @@ function InfiniteScroll() {
 
     const fetchItems = useCallback(async () => {
         try {
-            const response = await fetch(`https://api.unsplash.com/photos?page=${page}&client_id=cpUb90xLth9NRkoeqFRyOUfpauDK03RRl73RD4nzt04`);
+            const response = await fetch(`https://api.unsplash.com/photos?page=${page}&client_id=YOUR ACCESS KEY`);
             const data = await response.json();
             setItems(prevItems => [...prevItems, ...data]);
             if (data.length === 0) {
